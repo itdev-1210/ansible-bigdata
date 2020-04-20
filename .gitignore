@@ -1,0 +1,16 @@
+/ansible.cfg
+/hosts.dev_local
+/ansible.cfg.rpmnew
+/hosts
+/group_vars/dev_local
+*.dev_local
+*.swp
+*.swo
+*~
+documents/_build
+derby.log
+metastore_db/
+*.retry
+doctmp
+group_vars/all/python3
+.vagrant

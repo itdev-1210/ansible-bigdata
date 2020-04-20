@@ -1,0 +1,31 @@
+---
+# defaults file for roles/zeppelin
+
+# Installation
+
+zeppelin_dir: '/usr/local/zeppelin'
+zeppelin_log_dir: '/var/log/zeppelin'
+
+# You should configure the following parameters
+#zeppelin_package_base_url: 'http://www-us.apache.org/dist/zeppelin/zeppelin-0.7.3'
+#zeppelin_package_name: 'zeppelin-0.7.3-bin-all'
+#zeppelin_package_suffix: '.tgz'
+
+# zeppelin-site.xml
+zeppelin_server_port: '8080'
+zeppelin_notebook_dir: 'notebook'
+
+# zeppelin-env.sh
+zeppelin_java_home: '/usr/java/default'
+zeppelin_master: 'yarn-client'
+zeppelin_spark_home: '/usr/local/spark/default'
+# zeppelin_spark_submit_opts: '--driver-memory 1g --executor-memory=8g --executor-cores=2'
+zeppelin_hadoop_conf_dir: '/etc/hadoop/conf'
+
+zeppelin_hub_enabled: False
+zeppelin_hub_addr: 'https://www.zeppelinhub.com'
+zeppelin_hub_token: 'YOUR TOKEIN'
+# zeppelin_hub_key: 'YOUR KEY'
+
+# To use Zeppelin with HDP
+#zeppelin_hdp_version: '2.3.4.0-3485'

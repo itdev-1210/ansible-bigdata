@@ -1,0 +1,7 @@
+- hosts: '{{ server | default("hadoop_other") }}'
+  roles:
+    - { role: common, common_config_hostname: True }
+    - openjdk
+    - git
+    - maven
+    - spark_comm

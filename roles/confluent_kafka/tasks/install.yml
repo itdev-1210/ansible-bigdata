@@ -1,0 +1,2 @@
+- name: install_confluent_kafka
+  yum: name=confluent-kafka-{{ confluent_scala_version }} state=installed

@@ -1,0 +1,18 @@
+---
+# tasks file for roles/postgresql
+- name: install_postgresql
+  yum: name={{ item }} state=installed
+  with_items:
+    - postgresql-server
+    - postgresql-devel
+    - postgresql-contrib
+    - postgresql-jdbc
+    - python-psycopg2
+  tags: postgresql
+
+- name: copy_configuration
+  template: src={{ item }}.j2 dest=/var/lib/pgsql/data/{{ item }}
+  with_items:
+    - pg_hba.conf
+    - postgresql.conf
+  tags: postgresql
